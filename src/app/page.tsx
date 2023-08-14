@@ -1,6 +1,6 @@
 import styles from "./page.module.css";
 import Link from "next/link";
-
+import { BsLinkedin } from "react-icons/bs";
 export default function Home() {
   return (
     <main className={styles.main}>
@@ -16,11 +16,20 @@ export default function Home() {
           </Link>
         </div>
       </div>
-      {/* <div style={{ display: "flex", flexDirection: "row", gap: 20 }}>
-        <div>X 𝕏</div>
-        <div>Linked in</div>
-        <div>in</div>
-      </div> */}
+      <div
+        style={{ display: "flex", flexDirection: "row", gap: 20, zIndex: 20 }}
+      >
+        <div>
+          <Link
+            href="https://www.linkedin.com/in/ashchal-shrestha/"
+            legacyBehavior
+          >
+            <a target="_blank">
+              <BsLinkedin color="#0A66C2" size={24} />
+            </a>
+          </Link>
+        </div>
+      </div>
     </main>
   );
 }
